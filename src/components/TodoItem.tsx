@@ -1,9 +1,19 @@
-import classes from './TodoItem.module.css'
+import classes from "./TodoItem.module.css";
+import Todo from "../models/todo";
 
 const TodoItem: React.FC<{
-  todoText: string;
+  todo: Todo;
+  onItemTap: (arg0: Todo) => void;
 }> = (props) => {
-  return <li className={classes.item}>{props.todoText}</li>;
+  const onClickHandler = () => {
+    props.onItemTap(props.todo);
+  };
+
+  return (
+    <li onClick={onClickHandler} className={classes.item}>
+      {props.todo.text}
+    </li>
+  );
 };
 
 export default TodoItem;
