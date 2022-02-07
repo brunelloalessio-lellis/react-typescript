@@ -4,7 +4,7 @@ import TodoItem from "./TodoItem";
 import classes from "./Todos.module.css";
 import { TodosContext } from "../store/todos-context";
 
-const Todos: React.FC = (props) => {
+const Todos: React.FC = () => {
   const todosCtx = useContext(TodosContext);
 
   const itemTapHandler = (todo: Todo) => {
