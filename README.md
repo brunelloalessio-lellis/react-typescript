@@ -1,2 +1,0 @@
-# react-typescript
-react-typescript
